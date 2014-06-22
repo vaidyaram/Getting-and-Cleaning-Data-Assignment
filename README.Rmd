@@ -1,0 +1,38 @@
+CodeBook.Rmd README
+========================================================
+
+**run_analysis.R** is a single script that achieves all the objectives of the assignment mentioned **Requirements** section below.  
+
+
+Requirements
+-----------------------
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+3. Uses descriptive activity names to name the activities in the data set.
+4. Appropriately labels the data set with descriptive variable names. 
+5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+
+Data Sources
+-----------------------
+1. The source file for this assignment is on https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
+3. The unzipped file downloaded from the source mentioned in Step 1, contains the files mentioned from Step 3 to Step 9. **NOTE - These files are not submitted in this assignment work**
+3. X_train.txt contains the measurements for Train data set.
+4. y_train.txt contains the activity IDs corresponding to the measurements in X_Train.txt.
+5. subject_train.txt contrains the subject IDs corresponding to all the measyrements in X_Train.txt (train data set)
+6. activity_labels.txt contains the mapping activity codes to activity labels.
+7. X_test.txt contains the measurements for Test data set.
+8. y_test.txt contains the activity IDs corresponding to the measurements in X_Test.txt  (test data measurements set).
+9. subject_test contrains the subject IDs corresponding to all the measyrements in X_Test.txt (test data measuremetns set).
+
+Files Submitted
+-----------------------
+1. run_analysis.R - R script that achieves the objectives for the assignment. 
+2. CodeBook.Rmd contains the following.  
+  a) Introduction to the workings of the script.
+  b) Requirements
+  c) Data Sources
+  d) Variable Details
+  e) Steps
+3. CodeBook.html - The HTML version of the CodeBook.Rmd mentioned in point 2.
+4. Readme.Rmd
+5. Readme.html - The HTML version of the Readme.Rmd mentioned in point 4.

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>CodeBook.Rmd README</title>
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 12px;
+   margin: 8px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 { 
+   font-size:2.2em; 
+}
+
+h2 { 
+   font-size:1.8em; 
+}
+
+h3 { 
+   font-size:1.4em; 
+}
+
+h4 { 
+   font-size:1.0em; 
+}
+
+h5 { 
+   font-size:0.9em; 
+}
+
+h6 { 
+   font-size:0.8em; 
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre {	
+   margin-top: 0;
+   max-width: 95%;
+   border: 1px solid #ccc;
+   white-space: pre-wrap;
+}
+
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code.r, code.cpp {
+   background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * { 
+      background: transparent !important; 
+      color: black !important; 
+      filter:none !important; 
+      -ms-filter: none !important; 
+   }
+
+   body { 
+      font-size:12pt; 
+      max-width:100%; 
+   }
+       
+   a, a:visited { 
+      text-decoration: underline; 
+   }
+
+   hr { 
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote { 
+      padding-right: 1em; 
+      page-break-inside: avoid; 
+   }
+
+   tr, img { 
+      page-break-inside: avoid; 
+   }
+
+   img { 
+      max-width: 100% !important; 
+   }
+
+   @page :left { 
+      margin: 15mm 20mm 15mm 10mm; 
+   }
+     
+   @page :right { 
+      margin: 15mm 10mm 15mm 20mm; 
+   }
+
+   p, h2, h3 { 
+      orphans: 3; widows: 3; 
+   }
+
+   h2, h3 { 
+      page-break-after: avoid; 
+   }
+}
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+<h1>CodeBook.Rmd README</h1>
+
+<p><strong>run_analysis.R</strong> is a single script that achieves all the objectives of the assignment mentioned <strong>Requirements</strong> section below.  </p>
+
+<h2>Requirements</h2>
+
+<ol>
+<li>Merges the training and the test sets to create one data set.</li>
+<li>Extracts only the measurements on the mean and standard deviation for each measurement. </li>
+<li>Uses descriptive activity names to name the activities in the data set.</li>
+<li>Appropriately labels the data set with descriptive variable names. </li>
+<li>Creates a second, independent tidy data set with the average of each variable for each activity and each subject. </li>
+</ol>
+
+<h2>Data Sources</h2>
+
+<ol>
+<li>The source file for this assignment is on <a href="https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip</a>.</li>
+<li>The unzipped file downloaded from the source mentioned in Step 1, contains the files mentioned from Step 3 to Step 9. <strong>NOTE - These files are not submitted in this assignment work</strong></li>
+<li>X_train.txt contains the measurements for Train data set.</li>
+<li>y_train.txt contains the activity IDs corresponding to the measurements in X_Train.txt.</li>
+<li>subject_train.txt contrains the subject IDs corresponding to all the measyrements in X_Train.txt (train data set)</li>
+<li>activity_labels.txt contains the mapping activity codes to activity labels.</li>
+<li>X_test.txt contains the measurements for Test data set.</li>
+<li>y_test.txt contains the activity IDs corresponding to the measurements in X_Test.txt  (test data measurements set).</li>
+<li>subject_test contrains the subject IDs corresponding to all the measyrements in X_Test.txt (test data measuremetns set).</li>
+</ol>
+
+<h2>Files Submitted</h2>
+
+<ol>
+<li>run_analysis.R - R script that achieves the objectives for the assignment. </li>
+<li>CodeBook.Rmd contains the following.<br/>
+a) Introduction to the workings of the script.
+b) Requirements
+c) Data Sources
+d) Variable Details
+e) Steps</li>
+<li>CodeBook.html - The HTML version of the CodeBook.Rmd mentioned in point 2.</li>
+<li>Readme.Rmd</li>
+<li>Readme.html - The HTML version of the Readme.Rmd mentioned in point 4.</li>
+</ol>
+
+</body>
+
+</html>
+

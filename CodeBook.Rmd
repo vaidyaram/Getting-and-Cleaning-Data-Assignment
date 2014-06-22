@@ -1,0 +1,66 @@
+CodeBook.Rmd script description
+========================================================
+
+This markdown file explains the working of **run_analysis.R**. This is part of assignment submission for course "Getting and cleaning data".
+
+Introduction
+-----------------------
+The script achives the objectives as expected in the project submission mentioned under **Requirements** section.
+
+
+Requirements
+-----------------------
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+3. Uses descriptive activity names to name the activities in the data set.
+4. Appropriately labels the data set with descriptive variable names. 
+5. Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
+
+
+Variable Details
+-----------------------
+
+| VARIABLE NAME                    |      DESCRIPTION                                                                                    |   	
+|:---------------------------------|:--------------------------------------------------------------------------------------------------	|
+| **561 variabes mentioned in features.txt**   |    Numeric |
+| **Subject_ID**   |    Numeric -  contains for subject_ID corresponding to each measurement. Subject_ID for measurements in Train and Test data sets are in subject_train and subject_test respestively. |
+| **Activity_ID**   |    Numeric -  contains the activity corresponding to each measurement. However, they are mapped to descriptive activity labels in the script. Activity_ID for measurements in Train and Test data sets are in y_train and y_test respestively.  |
+| **merge_subject_activity_train** 	|     Data frame that combines Subject_ID, detailed activity description, and values for 561 variables for train data set. Dimensions - 7352 rows * 563 columns |
+| **merge_subject_activity_test**   |     Data frame that combines Subject_ID, detailed activity description, values for 561 variables for test data set. Dimension - 2947 rows * 563 columns|
+| **tidyData**   |     Merged Data frame that combines Subject_ID, detailed activity description, values for 561 variables for test and train data sets. Dimension - 10299 rows * 563 columns|
+| **tidyData_Student_Activity**   |     Filtered Data frame created from tidyData that contains only mean and std for all measuremnts. Dimension - 10299 rows * 81 columns|
+| **secondTidyDataSet**   |    Data frame created from tidyData that contains average measurements for all measurements for each combination of Subject_ID and Activity_ID. Dimension - 180 rows * 563 columns|
+
+
+Steps
+----------------
+
+1. Download and the zip file from source mentioned under Data Soures under **README.html**.
+
+2. Unzip the zip file Step 1.
+
+3. Get the column names/variable names from file "features.txt".
+
+4. Prepare the Train data set by combining the data in files X_train.txt, subject_train.txt and y_train.txt.    
+  a) Map the activity IDs in y_train to activity names from file activity_labels.txt.   
+  b) Merge the data in files X_train.txt, subject_train.txt and y_train.txt.  
+  
+5. Prepare the test data set by combining the data in files X_test.txt, subject_test.txt and y_test.txt.  
+  a) Map the activity IDs in y_train to activity names from file activity_labels.txt.   
+  b) Merge the data in files X_test.txt, subject_test.txt and y_test.txt.  
+  
+6. Create the **tidyData** set merging the train and test data prepared in step 4 and setp 5. This will achieve the objective  **Requirements 1**.  
+
+7. Extract the columns with mean and standard deviation measurements in tidyData. This will achieve the objectives **Requirements 2**.  
+
+8. Steps 4a and 5a will help achieve the objective under **Requirements 3**.  
+
+9. Apply labels to the variable names by parsing through the column names and applying corresponding labels.    
+  a) Check the variable names and label the variables. Variable names contains the following component - tBody or fBody or tGravity. The next level component in the variable name is "Acc" or "Gyro". Hence, the descriptive labels are added based on the components of the column name/variable name.This will achieve the objectives **Requirements 4**.  
+  
+10. The next step includes iteratates through Subject_IDs and then through Activity_IDs. For each combination of Subject_ID and Activity_ID, we create subsets of variable measurements and then calculate the average of each of the variables. There are 30 subjects and 6 variables. Hence, there will be 180 rows with 563 variables (dimensions 180 rows with 563 variables). This will achieve the objectives **Requirements 5**.  
+
+
+  
+  
+
